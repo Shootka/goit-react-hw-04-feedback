@@ -22,20 +22,11 @@ class App extends Component {
     return bad + good + neutral;
   };
 
-  onLeaveFeedback = (type) => {
-    if (type === 'good') {
+  onLeaveFeedback = (event) => {
+    const {name} = event.target
       this.setState({
-        good: this.state.good + 1,
+        [name]: this.state[name] + 1,
       });
-    } else if (type === 'neutral') {
-      this.setState({
-        neutral: this.state.neutral + 1,
-      });
-    } else {
-      this.setState({
-        bad: this.state.bad + 1,
-      });
-    }
   };
 
   render() {

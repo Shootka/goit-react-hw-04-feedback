@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Notification extends Component {
-  render() {
-    return (
-      <h3>No feedback sent</h3>
-    );
-  }
-}
+const Notification = () => {
+  return (
+    <h3>No feedback sent</h3>
+  );
+};
 
 export default Notification;

@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Section extends Component {
-  render() {
+const Section = ({title, children}) => {
     return (
       <div>
-        <h4 style={{marginBottom: 0}}>{this.props.title}</h4>
-        {this.props.children}
+        <h4 style={{marginBottom: 0}}>{title}</h4>
+        {children}
       </div>
     );
-  }
+
 }
 
 Section.propTypes = {
